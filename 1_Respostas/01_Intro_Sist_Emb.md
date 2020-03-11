@@ -32,3 +32,5 @@ System on Chip possuem microprocessadores juntamente com memória em um chip;
 FPGAs são dispositivos que podem ser configurados de acordo com sua aplicação, sendo que essa configuração é realizada de maneira lógica. 
 
 - 5. Por que usamos o Raspberry Pi na disciplina, ao invés de outro system-on-chip?
+
+Porque ela possui uma grande capacidade de processamento de funções, o que a torna suficiente para as mais diversas aplicações. Além disso, ela é bastante popular, o que auxilia os estudantes a encontrarem conteúdos relacionados a placa, de maneira a facilitar o ensino.
