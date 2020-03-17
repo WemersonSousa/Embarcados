@@ -21,27 +21,62 @@
    
 
    7. Apresente os respectivos comandos no terminal para: 
-   (a) Obter mais informações sobre um comando. 
-   - info comando ; Sendo comando, o comando desejado
-   (b) Apresentar uma lista com os arquivos dentro de uma pasta. 
-   - ls /pasta   ; sendo pasta, o caminho da pasta desejada
-   (c) Apresentar o caminho completo da pasta. 
-   - $pwd
-   (d) Trocar de pasta. 
-   (e) Criar uma pasta. 
-   (f) Apagar arquivos definitivamente. 
-   (g) Apagar pastas definitivamente. 
-   (h) Copiar arquivos. 
-   (i) Copiar pastas. 
-   (j) Mover arquivos. 
-   (k) Mover pastas. 
-   (l) Renomear pastas. 
-   (m) Apresentar o conteúdo de um arquivo. 
-   (n) Apresentar o tipo de um arquivo. 
-   (o) Limpar a tela do terminal. 
-   (p) Encontrar ocorrências de palavras-chave em um arquivo-texto. 
-   (q) Ordenar informações em um arquivo-texto. 
-   (r) Substituir ocorrências de palavras-chave em um arquivo-texto. 
-   (s) Conferir se dois arquivos são iguais. 
-   (t) Escrever algo na tela.
-
+   
+   -(a) Obter mais informações sobre um comando. 
+    info comando ; Sendo comando, o comando desejado
+    
+   -(b) Apresentar uma lista com os arquivos dentro de uma pasta. 
+    ls /pasta   ; sendo pasta, o caminho da pasta desejada
+    
+   -(c) Apresentar o caminho completo da pasta. 
+    $pwd
+    
+   -(d) Trocar de pasta. 
+   cd /pasta1/pasta2 ; sendo que inicialmente cd leva para a pasta "home", então a pasta1 tende a ser o usuário
+   
+   -(e) Criar uma pasta. 
+   Estando na pasta onde deseja-se criar nova pasta, usa-se o comando: mkdir [pasta]
+   
+   -(f) Apagar arquivos definitivamente. 
+   rm nomedoarquivo ;desde que se esteja na pasta do arquivo
+   
+   -(g) Apagar pastas definitivamente. 
+   rmdir /diretorio ; desde que a pasta esteja vazia
+   rm - r /diretorio ; caso a pasta não esteja vazia
+   
+   -(h) Copiar arquivos. 
+   cp /diretorio/arquivocopiado /diretoriodestino ; sendo diretorio o diretorio do arquivo copiado, e diretorio destino onde ele será colado
+   
+   -(i) Copiar pastas. 
+   cp - r /diretorio1 /diretorio2 ; sendo diretorio1 copiado para dentro do diretório2
+   
+   -(j) Mover arquivos. 
+   mv /diretorio/arquivocopiado /diretoriodestino ; sendo diretorio o diretorio do arquivo copiado, e diretorio destino onde ele será colado
+   
+   -(k) Mover pastas. 
+   mv /diretorio1 /diretorio2 ; sendo diretorio1 copiado para dentro do diretório2
+   
+   -(l) Renomear pastas. 
+   mv /diretorio1 /diretorio01 ; sendo diretorio1 o nome inicial da pasta e diretorio01 o novo nome, desde que já não exista pasta com tal nome
+   
+   -(m) Apresentar o conteúdo de um arquivo. 
+   cat /diretorio/arquivo ; sendo arquivo o nome do mesmo, contendo sua extensão
+   
+   -(n) Apresentar o tipo de um arquivo. 
+   
+   
+   -(o) Limpar a tela do terminal. 
+   clear
+   
+   -(p) Encontrar ocorrências de palavras-chave em um arquivo-texto. 
+   
+   
+   -(q) Ordenar informações em um arquivo-texto. 
+   
+   
+   -(r) Substituir ocorrências de palavras-chave em um arquivo-texto. 
+   
+   
+   -(s) Conferir se dois arquivos são iguais. 
+   
+   -(t) Escrever algo na tela.
