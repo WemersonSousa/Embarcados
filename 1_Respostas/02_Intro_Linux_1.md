@@ -69,14 +69,16 @@
    clear
    
    -(p) Encontrar ocorrências de palavras-chave em um arquivo-texto. 
-   
+   file /diretorio/nomedoarquivo  ; sendo diretorio o local do arquivo e nomedoarquivo seu nome contendo extensão
    
    -(q) Ordenar informações em um arquivo-texto. 
-   
+   sort /diretorio/nomedoarquivo  ; sendo diretorio o local do arquivo e nomedoarquivo seu nome contendo extensão
    
    -(r) Substituir ocorrências de palavras-chave em um arquivo-texto. 
-   
+   sed -i s/anterior/nova/g diretorio/nomedoarquivo ; sendo diretorio o local do arquivo e nomedoarquivo seu nome contendo extensão
    
    -(s) Conferir se dois arquivos são iguais. 
+   cmp ~/diretorio1/nomedoarquivo1 ~/diretorio2/nomedoarquivo2 ; sendo diretorios e nomes dos arquivos como explicados anteriormente
    
    -(t) Escrever algo na tela.
+    screen
