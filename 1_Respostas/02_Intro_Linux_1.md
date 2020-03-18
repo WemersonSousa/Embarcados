@@ -34,7 +34,6 @@
    6. Quais botões do teclado apresentam instruções escritas anteriormente?
    
  `  
- 
     - As teclas cima, ou baixo
   ` 
 
