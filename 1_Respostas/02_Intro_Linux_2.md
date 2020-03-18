@@ -7,6 +7,7 @@ Para todas as questões, escreva os comandos correspondentes no terminal.
 `
  $ cat ~/Ola_mundo.txt ; apresenta o conteudo do arquivo, considerando que a pasta foi criada na pasta de usuário (~)
 `
+
 2. Apresente o nome de todos os arquivos e pastas na pasta 'root'.
 
 `$ ls /     ; / é o endereço da pasta root
