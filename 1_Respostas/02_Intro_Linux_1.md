@@ -2,21 +2,27 @@
 
 
    1. Por que o Linux recebeu esse nome?
+   
        -Linux vem de Linus + Unix, sendo Linu, vindo do nome do criador do Linux, Linus Torvalds e Unix vindo do nome de um sistema operacional já existente.
 
    2. O que são daemons?
+   
        -Daemon é um programa que executa um serviço em segundo plano, ao invés de ser diretamente controlado pelo usuário.
 
    3. O que é o shell?
+   
         -Shell nada mais é que uma interface através da qual o usuário tem acesso aos serviços de um sistema operacional.
 
    4. Por que é importante evitar executar o terminal como super-usuário?
+   
     -Por segurança, uma vez que você possa cometer algum erro enquanto alterando seu sistema, sem pensar direito, e enquanto se digita a senha, tem-se tempo para pensar sobre tal ação. Além disso, todas as aplicações então funcionariam com privilégios de super usuário, o que faz com que qualquer vulnerabilidade existente no seu computador possa levar seu sistema operacional à falha, pois virus teriam acesso à qualquer parte do sistema.
 
    5. Qual botão do teclado completa o que o usuário escreve no terminal, de acordo com o contexto?
+   
     -A tecla Tab
 
    6. Quais botões do teclado apresentam instruções escritas anteriormente?
+   
     - As teclas cima, ou baixo
    
 
@@ -32,15 +38,15 @@ info comando ; Sendo comando, o comando desejado
     
    -(c) Apresentar o caminho completo da pasta. 
  
- $pwd
+ pwd
     
    -(d) Trocar de pasta. 
   
-  cd /pasta1/pasta2 ; sendo que inicialmente cd leva para a pasta "home", então a pasta1 tende a ser o usuário
+  cd /diretorio; sendo que deve ser indicado o diretorio completo de onde esta pasta está
    
    -(e) Criar uma pasta. 
  
- Estando na pasta onde deseja-se criar nova pasta, usa-se o comando: mkdir [pasta]
+ Estando na pasta onde deseja-se criar nova pasta, usa-se o comando: mkdir pasta ; sendo pasta o nome desejado
    
    -(f) Apagar arquivos definitivamente. 
   
@@ -57,7 +63,7 @@ cp /diretorio/arquivocopiado /diretoriodestino ; sendo diretorio o diretorio do 
    
    -(i) Copiar pastas. 
  
- cp - r /diretorio1 /diretorio2 ; sendo diretorio1 copiado para dentro do diretório2
+ cp -r /diretorio1 /diretorio2 ; sendo diretorio1 copiado para dentro do diretório2
    
    -(j) Mover arquivos. 
   
@@ -85,6 +91,7 @@ mv /diretorio1 /diretorio01 ; sendo diretorio1 o nome inicial da pasta e diretor
    
    -(p) Encontrar ocorrências de palavras-chave em um arquivo-texto. 
 
+grep palavra /diretorio ; sendo palavra, a palavra desejada e /diretorio o local e o nome do arquivo desejado 
    
    -(q) Ordenar informações em um arquivo-texto. 
   
@@ -96,7 +103,7 @@ mv /diretorio1 /diretorio01 ; sendo diretorio1 o nome inicial da pasta e diretor
    
    -(s) Conferir se dois arquivos são iguais. 
   
-  cmp ~/diretorio1/nomedoarquivo1 ~/diretorio2/nomedoarquivo2 ; sendo diretorios e nomes dos arquivos como explicados anteriormente
+  cmp ~/diretorio1/nomedoarquivo1 ~/diretorio2/nomedoarquivo2 ; sendo diretorios e nomes dos arquivos como explicados anteriormente, se forem iguais, nada será retornado, se forem diferentes, serão apontadas as diferenças
    
    -(t) Escrever algo na tela.
    
