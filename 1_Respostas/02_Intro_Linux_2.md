@@ -3,6 +3,7 @@ Para todas as questões, escreva os comandos correspondentes no terminal.
 1. Escreva o texto "Ola mundo cruel!" em um arquivo denominado "Ola_mundo.txt". Apresente o conteúdo deste arquivo no terminal.
 
 `$ echo "Ola mundo cruel!"  > Ola_mundo.txt ; cria o arquivo txt com o testo supracitado`
+
 `
  $ cat ~/Ola_mundo.txt ; apresenta o conteudo do arquivo, considerando que a pasta foi criada na pasta de usuário (~)
 `
