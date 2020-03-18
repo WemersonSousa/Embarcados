@@ -2,6 +2,7 @@
 
 
    1. Por que o Linux recebeu esse nome?
+   
 `
        -Linux vem de Linus + Unix, sendo Linu, vindo do nome do criador do Linux, Linus Torvalds e Unix vindo do nome de um sistema operacional já existente.
 `
@@ -84,7 +85,8 @@ $ mkdir pasta ; sendo pasta o nome desejado
 
 `
   $  rmdir /diretorio ; desde que a pasta esteja vazia
-  `` $  rm - r /diretorio ; caso a pasta não esteja vazia
+  `
+  ` $  rm - r /diretorio ; caso a pasta não esteja vazia
 
 `
 
