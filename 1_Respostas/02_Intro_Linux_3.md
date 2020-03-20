@@ -39,7 +39,9 @@ Não limite o script a 3 meses. Ele deve funcionar para vários casos, como por 
 ./cals.sh 1 2019 2 2020 3 2021 1 2010
 ```
 
-```cat > cals.sh #mais uma vez usando a função cat para escrever o script```
+```
+cat > cals.sh #mais uma vez usando a função cat para escrever o script
+```
 
 ```
 #!/bin/bash
@@ -70,7 +72,9 @@ done
 
 #para finalizar novamente, basta apertar ctrl + Z```
 
-```./cals.sh 3 2020 4 2020 #apenas um exemplo de chamada do script para o mês atual e próximo mes, para confirmar o funcionamento```
+`
+./cals.sh 3 2020 4 2020 #apenas um exemplo de chamada do script para o mês atual e próximo mes, para confirmar o funcionamento
+`
 
 3. Utilizando a lógica do script anterior, descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
 
