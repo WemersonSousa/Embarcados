@@ -164,4 +164,4 @@ $ grep palavra /diretorio ; sendo palavra, a palavra desejada e /diretorio o loc
 -(t) Escrever algo na tela.
 
 `
-   $ screen
+   $ echo
