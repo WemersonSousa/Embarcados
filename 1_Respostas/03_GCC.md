@@ -330,6 +330,52 @@ $ ./ola_argumentos Eu Mesmo e Minha Pessoa  #executa o programa criado
 8. Crie uma função que retorna a quantidade de caracteres em uma string, usando o seguinte protótipo:
 `int Num_Caracs(char *string);` Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um arquivo chamado 'num_caracs.h'. Compile 'num_caracs.c' para gerar o objeto 'num_caracs.o'.
 
+```
+$ cat > num_caracs.h #iniciando escrita do código no arquivo main.c
+```
+
+```
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int Num_Caracs(char *string);
+```
+
+```
+$ cat > num_caracs.c #iniciando escrita do código no arquivo num_caracs.c
+```
+
+```
+  
+#include "num_caracs.h"
+
+int Num_Caracs(char *string){
+
+  int i=0;
+
+  char c = 0;
+
+        do{
+          
+          c = string[i]; //c recebe cada caractere da entrada
+          
+          if(c != '\0') //incrementa i enquanto não chega no espaço
+          
+          i++;
+        
+        }while(c != '\0');  //enquanto não for recebido o espaço
+        
+  
+   return i;  //retorna i
+   
+} 
+```
+
+```
+gcc -c num_caracs.c #comando que cria num_caracs.o
+```
+
 9. Re-utilize o objeto criado na questão 8 para criar um código que imprime cada argumento de entrada e a quantidade de caracteres de cada um desses argumentos. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_1':
 
 ```bash
@@ -339,8 +385,63 @@ $ Argumento: Eu / Numero de caracteres: 2
 $ Argumento: Mesmo / Numero de caracteres: 5
 ```
 
+```
+$ cat > ola_num_caracs_1.c #iniciando escrita do código no arquivo num_caracs.c
+```
+
+```
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include "num_caracs.h"
+
+int main(int argc, char *argv[]){
+
+        int c = 0;
+        
+        for (int i = 0; i < argc; ++i)
+        
+        {       
+        
+                c = Num_Caracs(argv[i]); //c recebe o número de caracteres de cada palavra
+                
+            printf("Argumento: %s / Número de caracteres: %d\n", argv[i], c); //printa cada palavra  numero de caracteres
+            
+        }
+        
+        printf("\n");
+        
+        return 0;
+
+}
+```
+
 10. Crie um Makefile para a questão anterior.
 
+
+```
+$ cat > makefile #iniciando escrita do código
+```
+
+```
+num_caracs: ola_num_caracs_1.o num_caracs.o
+
+        gcc $(CFLAGS) -o num_caracs ola_num_caracs_1.o num_caracs.o
+        
+ola_num_caracs_1.o: ola_num_caracs_1.c num_caracs.h
+
+        gcc $(CFLAGS) -c ola_num_caracs_1.c
+        
+num_caracs.o: num_caracs.c num_caracs.h
+
+        gcc $(CFLAGS) -c num_caracs.c
+        
+clean:
+
+        rm -f *.o num_caracs
+   ```
+   
 11. Re-utilize o objeto criado na questão 8 para criar um código que imprime o total de caracteres nos argumentos de entrada. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_2':
 
 ```bash
@@ -348,4 +449,59 @@ $ ./ola_num_caracs_2 Eu Mesmo
 $ Total de caracteres de entrada: 25
 ```
 
+
+```
+$ cat > ola_num_caracs_2.c #iniciando escrita do código
+```
+
+```
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include "num_caracs.h"
+
+
+int main(int argc, char *argv[]){
+
+        int sum = 0, c = 0;
+        
+        for (int i = 0; i < argc; ++i)
+        {       
+        
+                c = Num_Caracs(argv[i]);    //pega os caracteres de cada palavra
+                
+                sum += c;                   //soma os caracteres de todas as palavras
+                
+        }
+        
+        printf("Total de caracteres de entrada: %d\n", sum);
+        
+        return 0;
+}
+```
+
 12. Crie um Makefile para a questão anterior.
+
+```
+$ cat > ola_num_caracs_2.c #iniciando escrita do código
+
+```
+
+```
+num_caracs: ola_num_caracs_2.o num_caracs.o
+
+        gcc $(CFLAGS) -o num_caracs ola_num_caracs_2.o num_caracs.o
+        
+ola_num_caracs_2.o: ola_num_caracs_2.c num_caracs.h
+
+        gcc $(CFLAGS) -c ola_num_caracs_2.c
+        
+num_caracs.o: num_caracs.c num_caracs.h
+
+        gcc $(CFLAGS) -c num_caracs.c
+        
+clean:
+
+        rm -f *.o num_caracs
+```
