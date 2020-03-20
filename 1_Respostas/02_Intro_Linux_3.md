@@ -13,7 +13,7 @@ for i in {1..100}
 
 do
 
-echo Número do arquivo = $i > _teste$i.txt
+echo Número do arquivo = $i > teste$i.txt
 
 done
 
@@ -50,7 +50,7 @@ flag=0                      #flag usada para determinar o que é mes e o que é 
 
 mes=""                      #variáveis que vai armazenar os meses  
 
-for vars in $@              #enquanto ouverem variáveis passadas, ele roda o loop
+for vars in $@              #enquanto haver variáveis passadas, ele roda o loop
 
 do
 
@@ -79,6 +79,47 @@ done
 
 3. Utilizando a lógica do script anterior, descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
 
+```
+cat > dates.sh #mais uma vez usando a função cat para escrever o script
+```
+
+```
+#!/bin/bash
+
+flag=0                      #flag usada para determinar o que é dia e o que é mes
+
+mes=""                      #variáveis que vai armazenar o mes ou meses
+
+for vars in $@              #enquanto haver variáveis passadas, ele roda o loop
+
+do
+
+if [ $flag -eq 0 ]; then    #se for uma entrada par (mes)
+
+mes=$vars           #salva o mes na variável
+
+flag=1              #ativa a flag
+
+elif [ $flag -eq 1 ]; then  #se for uma entrada impar (dia)
+
+for i in 10 11 12 13 14 15 16 17 18 19 #ultimos 10 anos, já que 2020 ainda não chegou
+
+do date -d $vars/$mes/20$i    #printa as datas nos ultimos 10 anos
+done 
+
+flag=0                         #reseta flag, para valer para mais de 1 aniversário
+
+fi                          #finaliza o if
+
+done
+
+#para finalizar novamente, basta apertar ctrl + Z
+```
+
+```
+./dates.sh  4 4 5 4      #para o caso do dia 4/4 e 5/4, meu aniversário (4/4) e mais um dia para teste de multiplas datas
+```
+
 4. Crie um arquivo _sites.txt_ com o seguinte conteúdo:
 
 ```
@@ -89,4 +130,41 @@ https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Aulas/01_Si
 
 Estes são links para slides de 3 aulas desta dsciplina, um para cada linha do arquivo _sites.txt_. Faça um script que faz o download destes slides automaticamente, a partir do arquivo _sites.txt_. (DICA: use o comando wget.)
 
+```
+cat > sites.sh #mais uma vez usando a função cat para escrever o script
+```
+
+```
+#!/bin/bash
+
+wget https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Aulas/01_Linux%20b%C3%A1sico.pdf
+wget https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Aulas/01_Linux%20b%C3%A1sico_Shell_Script.pdf
+wget https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Aulas/01_Sistemas%20Embarcados%20-%20Aula%201%20-%20Introdu%C3%A7%C3%A3o.pdf
+
+#novamente se finaliza com ctrl + Z
+```
+
+```
+./sites.sh     #para acessar os sites, basta rodar o script
+```
 5. Faça um script chamado _up.sh_ que sobe _N_ níveis na pasta onde você estiver, usando $1 como parâmetro de entrada. Por exemplo, se você estiver em **/home/aluno/Documents** e executar **./up.sh 2**, você automatica
+
+```
+cat > up.sh #mais uma vez usando a função cat para escrever o script
+```
+
+  ```
+ #!/bin/bash
+  var=$@                #passa a variável para var
+  while [ $var -ge 1 ]  # enquanto a for diferente de 0
+  do
+  cd ..                 #volta uma pasta
+  var=$((var-1))        #decrementa a variável
+  done
+  #novamente se finaliza com ctrl + Z
+```
+
+```
+. ./up2.sh 6      #o ponto no inicio se faz necessário para rodar o script fora do subshell
+
+```
