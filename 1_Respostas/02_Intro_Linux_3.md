@@ -5,7 +5,7 @@ Para todas as questões, escreva os scripts e as chamadas correspondentes no ter
 `
 $ cat > exe1.sh   #inicia um documento de texto em branco (o script). com a função cat que torna possível usar o terminal como um "bloco de notas" para escrever arquivos de texto longos, também seria possível usar função echo e digitar linha por linha`
 
-`
+```
 #!/bin/bash   
 
 for i in {1..100}
@@ -16,7 +16,8 @@ echo Número do arquivo = $i > _teste$i.txt
 
 done
 
-#esse é todo o escopo de texto necessário para o programa. Para finalizar o "bloco de notas" usa-se ctrl+z` 
+#esse é todo o escopo de texto necessário para o programa. Para finalizar o "bloco de notas" usa-se ctrl+z
+```
 
 `
 $ chmod +x teste.sh   # caso o script não esteja executável, basta usar o comando chmod +x
