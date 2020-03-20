@@ -5,7 +5,8 @@ Para todas as questões, escreva os scripts e as chamadas correspondentes no ter
 `
 $ cat > exe1.sh   #inicia um documento de texto em branco (o script). com a função cat que torna possível usar o terminal como um "bloco de notas" para escrever arquivos de texto longos, também seria possível usar função echo e digitar linha por linha`
 
-`#!/bin/bash   
+`
+#!/bin/bash   
 
 for i in {1..100}
 
