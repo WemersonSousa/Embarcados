@@ -15,8 +15,8 @@ echo Número do arquivo = $i > _teste$i.txt
 
 done
 
-#esse é todo o escopo de texto necessário para o programa. Para finalizar o "bloco de notas" usa-se ctrl+z
-` 
+#esse é todo o escopo de texto necessário para o programa. Para finalizar o "bloco de notas" usa-se ctrl+z` 
+
 `
 $ chmod +x teste.sh   # caso o script não esteja executável, basta usar o comando chmod +x
 
