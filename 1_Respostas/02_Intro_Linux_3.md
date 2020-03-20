@@ -6,14 +6,20 @@ Para todas as questões, escreva os scripts e as chamadas correspondentes no ter
 $ cat > exe1.sh   #inicia um documento de texto em branco (o script). com a função cat que torna possível usar o terminal como um "bloco de notas" para escrever arquivos de texto longos, também seria possível usar função echo e digitar linha por linha`
 
 `#!/bin/bash   
+
 for i in {1..100}
+
 do
+
 echo Número do arquivo = $i > _teste$i.txt
+
 done
-#esse é todo o escopo de texto necessário para o programa, para finalizar o "bloco de notas" usa-se ctrl+z
+
+#esse é todo o escopo de texto necessário para o programa. Para finalizar o "bloco de notas" usa-se ctrl+z
 ` 
 `
 $ chmod +x teste.sh   # caso o script não esteja executável, basta usar o comando chmod +x
+
 $ ./exe1.sh           # executa o script que cria os arquivos txt
 `
 
@@ -33,18 +39,27 @@ Não limite o script a 3 meses. Ele deve funcionar para vários casos, como por 
 `cat > cals.sh #mais uma vez usando a função cat para escrever o script `
 
 `#!/bin/bash
+
 flag=0                      #flag usada para determinar o que é mes e o que é ano
+
 mes=""                      #variáveis que vai armazenar os meses  
 
 for vars in $@              #enquanto ouverem variáveis passadas, ele roda o loop
+
 do
 
 if [ $flag -eq 0 ]; then    #se for uma entrada par (mes)
-        mes=$vars           #salva o mes na variável
-        flag=1              #ativa a flag
+
+mes=$vars           #salva o mes na variável
+
+flag=1              #ativa a flag
+
 elif [ $flag -eq 1 ]; then  #se for uma entrada impar (ano)
-        cal $mes $vars      #usa função cal para chamar o mes e ano
-        flag=0              #reseta flag, para valer para mais de 1 mes
+
+cal $mes $vars      #usa função cal para chamar o mes e ano
+
+flag=0              #reseta flag, para valer para mais de 1 mes
+
 fi                          #finaliza o if
 
 done
